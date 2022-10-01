@@ -34,9 +34,7 @@ int	hex_to_dec(char *num)
 void	explicit_color(char *num, t_point *point)
 {
 	int	i;
-	int	hex;
 
-	hex = 0;
 	i = 0;
 	while (num[i])
 	{

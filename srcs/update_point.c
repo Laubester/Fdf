@@ -60,18 +60,14 @@ void	rotations_helper(t_map *map, t_cam *cam, int i, t_point mid_p)
 void	update_rotations(t_map *map, t_cam *cam, t_point mid_p)
 {
 	int	i;
-	int	tmp_x;
 	int	tmp_y;
-	int	trans_x;
 	int	trans_y;
 
-	trans_x = mid_p.x;
 	trans_y = mid_p.y;
 	i = 0;
 	while (i < map->point_amt)
 	{
 		rotations_helper(map, cam, i, mid_p);
-		tmp_x = map->point[i].x;
 		tmp_y = map->point[i].y;
 		map->point[i].y = tmp_y * cos(cam->alpha)
 			+ (map->point_og[i].z * cam->z_scale) * sin(cam->alpha) + trans_y;
